@@ -36,8 +36,7 @@ This is the currect expected / recommended structure of the host:
 │   │   ├── latest                     # version
 │   │   │   ├── checkmiiout.patch      # name.patch
 │   │   │   └── checkmiiout.config     # name.config
-│   │   ├── beta                       # version
-│   │   └── v1            	           # version
+│   │   └── beta                       # version
 │   ├── US                             # region
 │   ├── JP                             # region
 │   └── ALL                            # region
