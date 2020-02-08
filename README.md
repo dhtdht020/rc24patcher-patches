@@ -35,7 +35,7 @@ This is the currect expected / recommended structure of the host:
 │   ├── EU                             # region
 │   │   ├── latest                     # version
 │   │   │   ├── checkmiiout.patch      # name.patch
-│   │   │   └── checkmiiout.config     # name.config
+│   │   │   └── checkmiiout.json       # name.json
 │   │   └── beta                       # version
 │   ├── US                             # region
 │   ├── JP                             # region
@@ -46,16 +46,17 @@ This is the currect expected / recommended structure of the host:
 ```
 I'm considering having the version directory be above the region, we'll see.
 
-## Configuration Files
+## JSON Configuration Files
 
 Configuration files are used to give the patcher information on the title id and additional steps that are required per title.
 
 These files will be generated automatically by the patcher's planned patch creation assist.
 
-Configs are not implemented yet- and there's no clear structure, but they will soon be used by the patcher to obtain the following information:
+Configs are not finalized yet- and there's no clear structure, but they will soon be used by the patcher to obtain the following information:
 
  - Title ID
- - Title Version
+ - Display Name
+ - Version
  - Additional steps
  - Description about the patch and further information
  - Support URL and email
