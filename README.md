@@ -34,8 +34,9 @@ This is the currect expected / recommended structure of the host:
 ├── checkmiiout                        # name
 │   ├── EU                             # region
 │   │   ├── latest                     # version
-│   │   │   ├── checkmiiout.patch      # name.patch
-│   │   │   └── checkmiiout.json       # name.json
+│   │   │   ├── checkmiiout.patch      # name.patch (Patch File)
+│   │   │   ├── checkmiiout.json       # name.json  (JSON)
+│   │   │   └── checkmiiout.cetk       # name.cetk  (Ticket)
 │   │   └── beta                       # version
 │   ├── US                             # region
 │   ├── JP                             # region
@@ -84,8 +85,18 @@ Examples of usage are "beta", "version2", "test".
 
 Version directories should include:
 
-    ├── name.patch         # .patch file
-    └── name.config        # .config file
+    ├── name.patch       # .patch file
+    ├── name.json        # .json file
+    └── name.cetk        # in case a ticket is needed
+
+## Ticket
+Most titles don't have their ticket on NUS, so this is often required to properly decrypt NUS contents.
+
+To use the ticket, add the following to the title JSON:
+
+    {
+	  "grab_ticket":"true"
+    }
 
 ## contents.config
 The contents file will be used to create a proper list of available patches in the patcher, and provide information about the host and what it includes.
