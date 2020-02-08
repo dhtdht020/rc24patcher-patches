@@ -2,5 +2,8 @@
   "display_name":"Check Mii Out Channel (Europe)",
   "title_id":"0001000148415050",
   "title_version":"512",
-  "grab_ticket":"true"
+  "grab_ticket":"true",
+  "version":"latest",
+  "region":"EU",
+  "name":"checkmiiout"
 }
