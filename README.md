@@ -36,12 +36,12 @@ This is the currect expected / recommended structure of the host:
 │   │   ├── latest                     # version
 │   │   │   ├── checkmiiout.patch      # name.patch (Patch File)
 │   │   │   ├── checkmiiout.json       # name.json  (JSON)
-│   │   │   └── checkmiiout.cetk       # name.cetk  (Ticket)
+│   │   │   └── cetk                   # Ticket File
 │   │   └── beta                       # version
 │   ├── US                             # region
 │   ├── JP                             # region
 │   └── ALL                            # region
-│   contents.config                    # info on host
+│   contents.json                      # contents of repo
 │   LICENSE
 └── README.md
 ```
@@ -98,7 +98,7 @@ To use the ticket, add the following to the title JSON:
 	  "grab_ticket":"true"
     }
 
-## contents.config
+## contents.json
 The contents file will be used to create a proper list of available patches in the patcher, and provide information about the host and what it includes.
 
 This is currently unused.
