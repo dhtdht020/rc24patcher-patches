@@ -47,7 +47,7 @@ I'm considering having the version directory be above the region, we'll see.
 
 ## JSON Configuration Files
 
-Configuration files are used to give the patcher information on the title id and additional steps that are required per title.
+Configuration files are used to give the patcher information on the title id and additional steps that are required for the patch.
 
 These files will be generated automatically by the patcher's planned patch creation assist.
 
@@ -61,7 +61,26 @@ Configs are not finalized yet- and there's no clear structure, but they will soo
  - Support URL and email
  - Patch metadata
 
-## Regions
+Currently, those are the supported objects:
+
+ - display_name - Optional, but recommended. In case this is missing, the patcher will use a fallback name.
+ - title_id - ID of the title to be obtained from NUS and patched. (Required)
+ - title_version - Version of the title to be obtained from NUS and patched. (Required)
+ - grab_ticket - If a ticket should be grabbed from this repository instead of NUS.
+ - region - Region / Version in the repository. This should be the same as the name of the region directory (e.g EU, ALL, Beta)
+ - name - Patch Name in the repository. This should be the same as the name of the patch directory (e.g checkmiiout)
+### Example configuration JSON:
+    {
+    "display_name":"Check Mii Out Channel (Europe)",
+    "title_id":"0001000148415050",
+    "title_version":"512",
+    "grab_ticket":"true",
+    "region":"EU",
+    "name":"checkmiiout"
+    }
+
+## Regions (Also Versions)
+
 
 Regions can be everything, and are called by the patcher by string.
 The recommended names are:
@@ -71,15 +90,17 @@ The recommended names are:
  - JP: NTSC-J patches (Japan)
  - ALL: Region free patches
 
-Version directories should include:
+Regions can also be used for different versions and variations of the patch, examples for versions are:
+
+ - Beta
+ - Test
+
+Region directories should include:
 
     ├── name.patch       # .patch file
     ├── name.json        # .json file
     └── name.cetk        # in case a ticket is needed
 
-## Versions
-
-Deprecated.
 
 ## Ticket
 Most titles don't have their ticket on NUS, so this is often required to properly decrypt NUS contents.
