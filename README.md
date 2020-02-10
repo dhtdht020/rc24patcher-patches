@@ -23,9 +23,9 @@ RiiConnect24 Patcher will have an interactive patch creation wizard that will wa
 
 By default, the patcher uses this GitHub repository to obtain patches through the function obtain_online_patch
 
-    obtain_online_patch(name, region, version, hostname)
+    obtain_online_patch(name, region, hostname)
 
-    http://hostname/name/region/version/
+    http://hostname/name/region/
 
 This is the currect expected / recommended structure of the host:
 #### Example Directory Structure:
