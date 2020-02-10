@@ -33,11 +33,9 @@ This is the currect expected / recommended structure of the host:
 .
 ├── checkmiiout                        # name
 │   ├── EU                             # region
-│   │   ├── latest                     # version
-│   │   │   ├── checkmiiout.patch      # name.patch (Patch File)
-│   │   │   ├── checkmiiout.json       # name.json  (JSON)
-│   │   │   └── cetk                   # Ticket File
-│   │   └── beta                       # version
+│   │   ├── checkmiiout.patch          # name.patch (Patch File)
+│   │   ├── checkmiiout.json           # name.json  (JSON)
+│   │   └── cetk                       # Ticket File
 │   ├── US                             # region
 │   ├── JP                             # region
 │   └── ALL                            # region
@@ -73,21 +71,15 @@ The recommended names are:
  - JP: NTSC-J patches (Japan)
  - ALL: Region free patches
 
-The region directories should contain version directories.
-
-## Versions
-
-Versions are used by the patcher exclusively for the ability to store multiple variations of a patch under the same name and region.
-
-By default, the patcher uses the version "latest", making it mandatory.
-
-Examples of usage are "beta", "version2", "test".
-
 Version directories should include:
 
     ├── name.patch       # .patch file
     ├── name.json        # .json file
     └── name.cetk        # in case a ticket is needed
+
+## Versions
+
+Deprecated.
 
 ## Ticket
 Most titles don't have their ticket on NUS, so this is often required to properly decrypt NUS contents.
