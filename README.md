@@ -4,6 +4,10 @@ This is the repository used by the cross platform python RiiConnect24 Patcher (W
 
 **Warning: This is a README discussing unreleased software, it might change in the future.**
 
+## Important announcement regarding Windows support (and the cross-platform title)
+It has been requested by RiiConnect24 to block the patcher from running on Windows, even though it can run on it, because we recommend only using the batch patcher (aka the original patcher), which has been worked on for years by KcrPL and is the absolute best option for Windows, providing the easiest patching proccess.
+The function that blocks windows support is `rc24patcher.is_windows()` at line 9 of the patcher.
+When this is executed, the batch patcher is downloaded from the internet and launched.
 
 ## .patch Files
 
